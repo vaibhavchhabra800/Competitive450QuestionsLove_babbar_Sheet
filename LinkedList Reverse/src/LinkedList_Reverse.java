@@ -41,10 +41,10 @@ public class LinkedList_Reverse {
 		}
 	}
 	
-	public static void reverse_Iterative(Node curr)
+	public static void reverse_Iterative()
 	{
-		Node next=curr;
-		Node prev=curr;
+		Node next=head;
+		Node prev=null;
 		Node currentOne=head;
 		while(currentOne!=null)
 		{
@@ -53,6 +53,7 @@ public class LinkedList_Reverse {
 			prev=currentOne;
 			currentOne=next;
 		}
+		head=prev;
 	}
 	
 	public static void reverse_Recursive(Node curr)
@@ -66,6 +67,9 @@ public class LinkedList_Reverse {
 		LinkedList_Reverse.insert(3);
 		LinkedList_Reverse.insert(4);
 		LinkedList_Reverse.insert(5);
+		LinkedList_Reverse.print();
+		System.out.println();
+		LinkedList_Reverse.reverse_Iterative();
 		LinkedList_Reverse.print();
 		
 		
