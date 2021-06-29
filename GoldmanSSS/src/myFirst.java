@@ -111,7 +111,7 @@ public class myFirst {
 		ArrayList<Integer> lst1= new ArrayList<Integer>(myMap.values());
 		//lst1
 		int max=(Collections.max(lst1)) ;
-		for(int k=0;k<lst1.size(); k++)
+		for(int k=0;k<lst2.size(); k++)
 		{
 			if(myMap.get(lst2.get(k))==max)
 			{

@@ -267,13 +267,57 @@ public class ShortestPath2WordsClass {
 		    return minResultValue;
 		}
 	
+		
+		
+		
+		public static double shortestDistanceVaibhav27June21(String document, String word1, String word2)
+		{
+			String[] st2 = document.split("[,. ]");
+			double Mindist =document.length()*1.0;
+			double loc1=0;
+			double loc2=0;
+			int index=0;
+			for(String wordCurr : st2)
+			{
+				if(wordCurr.equals(word1))
+				{
+					loc1=index+word1.length()/2.0;
+				}
+				else if(wordCurr.equals(word2))
+				{
+					loc2=index+word2.length()/2.0;
+				}
+				
+				if(loc1!=0.0 && loc2!=0.0)
+				{
+					double temp=Math.abs((loc1)-(loc2));
+					if(temp<Mindist)
+					{
+						Mindist = temp;
+					}
+				}
+				if(wordCurr.equals(""))
+				{
+					index+=2;
+				}
+				else
+				{
+					index+=wordCurr.length()+1;
+				}
+			}
+			if(loc1 ==0.0 || loc2 == 0.0)
+				return -1;
+			return Mindist;
+	
+		}
 	public static void main(String[] args) {
 
 
 		String document = "in publishing and graphic design, lorem ipsum is a filler text commonly used to demonstrate the graphic elements";
 
 		//double ans =distanceFinalShivam( document, "in", "a" ) ;
-		double ans =shortestDistanceVaibhav15June21( document, "in", "a" ) ;
+		//double ans =shortestDistanceVaibhav15June21( document, "in", "a" ) ;
+		double ans =shortestDistanceVaibhav27June21( document, "is", "a" ) ;
 		
 		System.out.println(ans);
 

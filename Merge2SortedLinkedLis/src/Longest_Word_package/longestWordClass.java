@@ -68,12 +68,53 @@ public class longestWordClass {
 		return ans;
     }
  
+	
+	public static void bekarFxn()
+	{
+		
+		ArrayList<String> arr = new ArrayList<String>();
+		arr.add("10.0.0.3");
+		arr.add("10.0.0.9");
+		arr.add("10.0.0.8");
+		arr.add("10.0.0.7");
+		arr.add("10.0.0.1");
+		arr.add("10.0.0.6");
+		arr.add("10.0.0.1");
+		arr.add("10.0.0.1");
+		arr.add("10.0.0.3");
+		String w1= "52";
+		String w2 ="7771";
+		int wow = w1.compareToIgnoreCase(w2);
+		System.out.println(wow+"=Wow");
+		Comparator<String> com = new Comparator<String>()
+		{
+			public int compare(String s1 , String s2)
+			{
+				if(s1.compareToIgnoreCase(s2)>0)
+					return 1;
+				else 
+					return -1;
+				//return 0;
+			}
+		};
+		Collections.sort(arr,com);
+		for(String word : arr)
+		{
+			System.out.println(word);
+		}
+		
+		 
+        
+		
+		
+	}
 	public static void main(String[] args) {
 		
 		String[] dict = new String[]{"to", "toe","etdgoo", "toes", "doe", "dog", "god", "dogs", "book", "banana"};
 		String pattern = "oetdg";
 		Set<String> abc =longestWord(pattern,dict);
 		System.out.println(abc);
+		bekarFxn();
 	}
 
 }

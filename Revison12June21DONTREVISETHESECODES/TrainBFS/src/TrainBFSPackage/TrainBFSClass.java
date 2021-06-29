@@ -27,6 +27,7 @@ public class TrainBFSClass
 			this.pathwa =pathwa;
 		}
 	}
+	
 	public static void BFS(ArrayList<Edge>[] graph , int startVertex)
 	{
 		Pair pairStart = new Pair(startVertex , startVertex +"");

@@ -4,7 +4,6 @@ public class SmallestNumberRotatedClass {
 
 	public static int FindMin(int arr[])
 	{
-		int pivot = -1;
 		int low =0;
 		int high = arr.length -1;
 		int mid= 0;
