@@ -87,14 +87,8 @@ public class myFirst {
 			String line1= lines[i];
 			String[] lineInside = line1.split(" ");
 			String abc = lineInside[0];
-			if(myMap.containsKey(abc))
-			{
-				int times=myMap.get(abc);
-				myMap.put(abc, (times+1));
-			}
-			else {
-				myMap.put(abc, (1));
-			}
+			myMap.put(abc,(myMap.getOrDefault(abc,0)+1));
+
 		}
 		
 		
