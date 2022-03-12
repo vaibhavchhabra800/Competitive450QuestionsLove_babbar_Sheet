@@ -133,21 +133,21 @@ public class BFSClass {
 			graph[part2].add(new Edge(part2,part1));
 			
 			
+			Comparator<Edge> com = new Comparator<Edge>()
+			{
+				@Override
+				public int compare(Edge e1 ,Edge e2)
+				{
+					if(e1.src>e2.src)
+						return 1;
+					else
+						return -1;
+				}
+
+			};
 			for(int k =0 ; k<graph.length; k++)
 			{
-				
-				Comparator<Edge> com = new Comparator<Edge>()
-				{
-					@Override
-					public int compare(Edge e1 ,Edge e2)
-					{
-						if(e1.src>e2.src)
-							return 1;
-						else 
-							return -1;
-					}
-					
-				};
+
 				Collections.sort(graph[k],com);
 			}
 			BFS( graph , 2  );

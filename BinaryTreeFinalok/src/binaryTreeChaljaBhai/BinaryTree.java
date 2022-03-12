@@ -24,7 +24,7 @@ public class BinaryTree {
 		int state;
 	}
 	
-	public  static void display(Node node)
+	public  static void display(Node node )
 	{
 		
 		String str="";
@@ -112,7 +112,7 @@ public class BinaryTree {
 			}
 			
 		}
-		
+
 		BinaryTree.display(root);
 		
 		

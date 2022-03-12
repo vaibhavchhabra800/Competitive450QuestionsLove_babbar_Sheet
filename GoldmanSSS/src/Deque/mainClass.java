@@ -34,13 +34,8 @@ public class mainClass {
 	
 		else {
 
-			
-			
 			headPassed.prev= newNode;
 			newNode.next=headPassed;
-			
-			
-
 		}
 		headPassed=newNode;
 		arrlst.add(headPassed);

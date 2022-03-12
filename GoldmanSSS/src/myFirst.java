@@ -209,8 +209,9 @@ public class myFirst {
 		
 		
 		
+
 		return new int[] {startMax,maxSize};
-		
+
 	}
 	
 	public static String findMissingLetters(String sentence) {

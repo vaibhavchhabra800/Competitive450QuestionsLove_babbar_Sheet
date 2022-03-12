@@ -52,7 +52,7 @@ public class LkListMain {
 	{
 		Node current= headPassed;
 		Node previous = null;
-		Node next= null;
+		Node next= headPassed;
 		while(current!=null)
 		{
 			next = current.next;
@@ -70,7 +70,6 @@ public class LkListMain {
 		Node head1=obj.head;
 		
 		obj.head = obj.add(obj.head, 1);
-		obj.head = obj.add(obj.head, 2);
 		obj.head = obj.add(obj.head, 3);
 		obj.head = obj.add(obj.head, 4);
 		obj.head = obj.add(obj.head, 5);

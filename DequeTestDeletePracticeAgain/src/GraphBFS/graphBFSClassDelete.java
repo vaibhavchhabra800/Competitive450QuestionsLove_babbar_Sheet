@@ -159,6 +159,17 @@ public class graphBFSClassDelete
 		{
 			Collections.sort(graph[k],com);
 		}
+
+		System.out.println("YoDown");
+		for(ArrayList<Edge> grp:graph)
+		{
+			for(Edge ea1 :grp)
+			{
+				System.out.print(ea1.nbr);
+			}
+			System.out.println();
+		}
+		System.out.println("YoAbove");
 		int startVertex=2;
 		BFS(graph,startVertex);
 		
